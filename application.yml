@@ -1,11 +1,11 @@
 server:
-  port: 2333
+  port: ${PORT}
 
 lavalink:
   server:
     password: "youshallnotpass"
     sources:
-      youtube: false
+      youtube: false  # disable old extractor
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -17,8 +17,13 @@ lavalink:
     useSeekGhosting: true
     resamplingQuality: HIGH
 
+plugins:
+  youtube:
+    enabled: true  # enable new youtube-source plugin
+
 logging:
   file:
     path: ./logs/
   level:
     root: INFO
+    lavalink: INFO
