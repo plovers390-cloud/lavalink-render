@@ -20,6 +20,11 @@ lavalink:
 plugins:
   youtube:
     enabled: true  # enable new youtube-source plugin
+     clients:
+      - WEB
+      - ANDROID
+      - TVHTML5
+      - WEB_REMIX
 
 logging:
   file:
