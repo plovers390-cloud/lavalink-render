@@ -5,17 +5,25 @@ lavalink:
   server:
     password: "youshallnotpass"
     sources:
-      youtube: false
+      youtube: true  # Change this to true
       bandcamp: true
       soundcloud: true
       twitch: true
       vimeo: true
       http: true
       local: false
+    # Add YouTube configuration
+    youtubeConfig:
+      httpConfig:
+        readTimeout: 30000
+        connectionTimeout: 10000
     bufferDurationMs: 400
     trackStuckThresholdMs: 10000
     useSeekGhosting: true
     resamplingQuality: HIGH
+    # Enable retry on failure
+    ratelimit:
+      retryLimit: 3
 
 logging:
   file:
