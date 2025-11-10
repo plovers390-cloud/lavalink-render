@@ -1,11 +1,11 @@
 server:
-  port: ${PORT}
+  port: ${PORT}  # Render automatically assigns a port, this keeps it dynamic
 
 lavalink:
   server:
     password: "youshallnotpass"
     sources:
-      youtube: false  # disable old extractor
+      youtube: false  # Disable old built-in extractor (we use the plugin instead)
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -20,6 +20,12 @@ lavalink:
 plugins:
   youtube:
     enabled: true
+    clients:
+      - WEB
+      - WEB_REMIX
+      - ANDROID_VR
+      - WEB_EMBEDDED_PLAYER
+
   lavasrc:
     enabled: true
     providers:
@@ -29,7 +35,8 @@ plugins:
     spotify:
       clientId: "55216b256f2e4beca298bfe20d961052"
       clientSecret: "fd5a28401084454497afefc48d2f7c26"
-
+    deezer:
+      masterDecryptionKey: "e82ckOhfWiF8HqZ7KchW0FzghkFzBP5eb9xvQLuK7y0="
 
 logging:
   file:
