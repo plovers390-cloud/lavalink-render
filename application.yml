@@ -1,11 +1,11 @@
 server:
-  port: ${PORT}  # Render automatically assigns a port
+  port: 433
 
 lavalink:
   server:
     password: "youshallnotpass"
     sources:
-      youtube: false   # Disable Lavalink's internal extractor (plugin handles YouTube)
+      youtube: false
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -17,40 +17,8 @@ lavalink:
     useSeekGhosting: true
     resamplingQuality: HIGH
 
-plugins:
-  youtube:
-    enabled: true
-    clients:
-      - WEB
-      - WEB_REMIX
-      - ANDROID_VR
-      - WEB_EMBEDDED_PLAYER
-
-  lavasrc:
-    enabled: true
-    providers:
-      - "youtube"
-      - "spotify"
-      - "deezer"
-      - "applemusic"
-
-    # ✅ Spotify Integration
-    spotify:
-      clientId: "55216b256f2e4beca298bfe20d961052"
-      clientSecret: "fd5a28401084454497afefc48d2f7c26"
-      countryCode: "IN"
-
-    # ✅ Deezer Integration
-    deezer:
-      masterDecryptionKey: "e82ckOhfWiF8HqZ7KchW0FzghkFzBP5eb9xvQLuK7y0="
-
-    # ✅ Apple Music
-    apple:
-      enable: true
-
 logging:
   file:
     path: ./logs/
   level:
     root: INFO
-    lavalink: INFO
