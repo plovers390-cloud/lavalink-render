@@ -19,12 +19,17 @@ lavalink:
 
 plugins:
   youtube:
-    enabled: true  # enable new youtube-source plugin
-     clients:
-      - WEB
-      - ANDROID
-      - TVHTML5
-      - WEB_REMIX
+    enabled: true
+  lavasrc:
+    enabled: true
+    providers:
+      - "spotify"
+      - "deezer"
+      - "applemusic"
+    spotify:
+      clientId: "55216b256f2e4beca298bfe20d961052"
+      clientSecret: "fd5a28401084454497afefc48d2f7c26"
+
 
 logging:
   file:
